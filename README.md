@@ -1,5 +1,6 @@
 # RouterTabsDraft
-Few components which make able to open any route of Angular Router be opened in new Tab in same window
+Few components which make able to open any route of Angular Router be opened in new Tab in same window.
+Like classic desktop MDI application https://en.wikipedia.org/wiki/Multiple_document_interface
 
 You need to create your app and set the routes like 
 
