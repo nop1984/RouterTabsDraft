@@ -1,0 +1,25 @@
+    .tab-close {
+      color: gray;
+      text-align: right;
+      cursor: pointer;
+      content: '';
+    }
+    
+    .nav-tabs li {
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        border-radius: 0.5em 0.5em 0 0;
+        display: inline-block;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+    }
+    
+    .nav-tabs li i {
+        margin-left: 1em;
+    }
+    
+    .nav-tabs li.active {
+        border-bottom: none;
+    } 
