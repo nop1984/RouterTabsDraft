@@ -1,0 +1,26 @@
+<!--<li *ngFor="let aroute of router.config"><a [routerLink]="[{outlets: {testoutlet:aroute.path}}]">{{aroute.path}}</a></li>-->
+<!--
+<li *ngFor="let aroute of router.config"><a [routerLink]="[aroute.path]">{{aroute.path}}</a></li>
+<dyn-tabs #tabs>
+    <dyn-tab [tabTitle]="'People'">11111111</dyn-tab>
+    <router-outlet-i></router-outlet-i>
+</dyn-tabs>
+<ng-template let-dataContext="dataContext" #dynroutlet>
+    <dyn-router-outlet name="{{dataContext.url}}"></dyn-router-outlet>
+</ng-template>
+-->
+
+<li *ngFor="let aroute of router.config"><a [routerLink]="[aroute.path]">{{aroute.path}}</a></li>
+
+    <ul class="nav nav-tabs">
+      <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
+        <a href="#">{{tab.title}}</a>
+      </li>
+      <!-- dynamic tabs -->
+      <li *ngFor="let tab of dynamicTabs" (click)="selectTab(tab)" [class.active]="tab.active">
+        {{tab.title}} <i class="tab-close fa fa-times" aria-hidden="true" *ngIf="tab.isCloseable" (click)="closeTab(tab, $event)"></i>
+      </li>
+    </ul>
+    <ng-content></ng-content>
+    <ng-template dynamic-tabs #container></ng-template>
+    <router-outlet-i #roi></router-outlet-i>
