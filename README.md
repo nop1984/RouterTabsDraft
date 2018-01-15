@@ -6,9 +6,9 @@ You need to create your app and set the routes like
 ```
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: DynTable, data: [{dataSource: 'http://dm.loc/conf/strings.json'}]},
-  { path: 'userStrings', outlet: 'testoutlet', component: DynTable, data: [{dataSource: 'http://dm.loc/conf/strings.json'}]},
-  { path: 'adminString', component: DynTable, data: [{dataSource: 'http://dm.loc/conf/strings.json'}]}
+  { path: 'home', component: Component1, data: {}},
+  { path: 'path2', component: Component2, data: {}},
+  { path: 'path3', component: Component3, data: {}}
 ];
 
 @NgModule({
